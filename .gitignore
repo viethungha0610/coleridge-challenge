@@ -101,6 +101,10 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Large data
+input/*.csv
+input/*.json
+
 # Environments
 .env
 .venv
@@ -127,3 +131,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCODE
+.vscode/
+
+# Models
+*.bin
