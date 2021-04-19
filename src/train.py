@@ -17,7 +17,9 @@ import engine
 from model import EntityModel
 
 def process_data(data_path):
-    df = pd.read_csv(data_path, nrows=1000)
+    df = pd.read_csv(data_path, 
+                    #  nrows=100000
+                     )
     enc_tag = preprocessing.LabelEncoder()
 
     df.loc[:, "Tag"] = enc_tag.fit_transform(df["Tag"])
