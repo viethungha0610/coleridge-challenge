@@ -17,9 +17,12 @@ import engine
 from model import EntityModel
 
 def process_data(data_path):
+    print("Reading data ...")
     df = pd.read_csv(data_path, 
                     #  nrows=100000
                      )
+    df.dropna(subset=["Word"], inplace=True)
+    print("Finished reading data.")
     enc_tag = preprocessing.LabelEncoder()
 
     df.loc[:, "Tag"] = enc_tag.fit_transform(df["Tag"])
